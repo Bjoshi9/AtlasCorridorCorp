@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40">
+  <!-- Angular triangular "A"/flag mark, gold/white on navy -->
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F0C97A"/>
+      <stop offset="100%" stop-color="#C7A24E"/>
+    </linearGradient>
+  </defs>
+  <path d="M20 4 L36 34 L28 34 L24.5 26 L15.5 26 L12 34 L4 34 Z" fill="url(#goldGrad)"/>
+  <path d="M20 12 L17.5 21 L22.5 21 Z" fill="#FFFFFF"/>
+  <rect x="6" y="36" width="28" height="2" fill="#E2B859"/>
+</svg>

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" width="320" height="240" aria-hidden="true">
+  <defs>
+    <linearGradient id="phoneGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2A4A7A"/>
+      <stop offset="100%" stop-color="#00183B"/>
+    </linearGradient>
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0B2A55"/>
+      <stop offset="100%" stop-color="#00183B"/>
+    </linearGradient>
+    <radialGradient id="globeGrad" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#3A6BB0"/>
+      <stop offset="100%" stop-color="#00183B"/>
+    </radialGradient>
+    <radialGradient id="coinGold" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#F4D88A"/>
+      <stop offset="60%" stop-color="#E2B859"/>
+      <stop offset="100%" stop-color="#A6842C"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Globe (behind phone) -->
+  <g transform="translate(205, 70)">
+    <circle cx="0" cy="0" r="58" fill="url(#globeGrad)"/>
+    <g fill="none" stroke="#7FB3E0" stroke-width="1" opacity="0.55">
+      <ellipse cx="0" cy="0" rx="58" ry="22"/>
+      <ellipse cx="0" cy="0" rx="22" ry="58"/>
+      <line x1="-58" y1="0" x2="58" y2="0"/>
+      <line x1="0" y1="-58" x2="0" y2="58"/>
+    </g>
+    <!-- Subtle landmass shapes -->
+    <g fill="#5A8FCB" opacity="0.45">
+      <path d="M-22 -18 Q-8 -22 0 -10 Q-4 4 -18 4 Q-26 -8 -22 -18 Z"/>
+      <path d="M10 8 Q22 6 26 18 Q20 28 10 26 Q4 16 10 8 Z"/>
+    </g>
+  </g>
+
+  <!-- Phone -->
+  <g transform="translate(40, 30)">
+    <rect x="0" y="0" width="120" height="200" rx="18" fill="url(#phoneGrad)"/>
+    <rect x="8" y="14" width="104" height="172" rx="10" fill="url(#screenGrad)"/>
+    <!-- Up arrow / dollar on screen -->
+    <g transform="translate(60, 100)">
+      <circle r="34" fill="#E2B859" opacity="0.15"/>
+      <path d="M0 -20 L0 18 M-12 -8 L0 -20 L12 -8" fill="none" stroke="#E2B859" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="0" y="6" text-anchor="middle" fill="#E2B859" font-family="Poppins, Arial" font-size="20" font-weight="700">$</text>
+    </g>
+    <!-- Speaker dot -->
+    <circle cx="60" cy="8" r="2" fill="#3A6BB0"/>
+  </g>
+
+  <!-- Floating gold coins -->
+  <g>
+    <!-- Coin 1 (top right, $) -->
+    <g transform="translate(255, 30)">
+      <circle r="22" fill="url(#coinGold)"/>
+      <circle r="22" fill="none" stroke="#A6842C" stroke-width="1.5" opacity="0.6"/>
+      <text x="0" y="6" text-anchor="middle" fill="#5A3F12" font-family="Poppins, Arial" font-size="20" font-weight="700">$</text>
+    </g>
+    <!-- Coin 2 (bottom left, €) -->
+    <g transform="translate(30, 200)">
+      <circle r="18" fill="url(#coinGold)"/>
+      <circle r="18" fill="none" stroke="#A6842C" stroke-width="1.5" opacity="0.6"/>
+      <text x="0" y="6" text-anchor="middle" fill="#5A3F12" font-family="Poppins, Arial" font-size="16" font-weight="700">€</text>
+    </g>
+    <!-- Coin 3 (mid right, $) -->
+    <g transform="translate(285, 165)">
+      <circle r="16" fill="url(#coinGold)"/>
+      <circle r="16" fill="none" stroke="#A6842C" stroke-width="1.5" opacity="0.6"/>
+      <text x="0" y="5" text-anchor="middle" fill="#5A3F12" font-family="Poppins, Arial" font-size="14" font-weight="700">$</text>
+    </g>
+  </g>
+</svg>

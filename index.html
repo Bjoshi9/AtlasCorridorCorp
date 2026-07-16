@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atlas Corridor Corp — Your Trusted Partner for Global Money Transfers</title>
+  <meta name="description" content="Fast, secure and reliable remittance services to send money across the world. Trusted by 50,000+ customers across 200+ countries." />
+
+  <!-- Google Fonts: Poppins (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons (static CDN build) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+</head>
+<body>
+
+  <!-- ============================================================ -->
+  <!-- HEADER / NAVIGATION                                            -->
+  <!-- ============================================================ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container site-header__inner">
+      <a class="brand" href="#top" aria-label="Atlas Corridor Corp home">
+        <img class="brand__mark" src="assets/logo.svg" alt="" width="40" height="40" />
+        <span class="brand__text">
+          <span class="brand__name">ATLAS</span>
+          <span class="brand__sub">CORRIDOR CORP</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="primaryNav">
+        <i data-lucide="menu" aria-hidden="true"></i>
+      </button>
+
+      <nav class="primary-nav" id="primaryNav" aria-label="Primary">
+        <ul class="primary-nav__list">
+          <li><a class="primary-nav__link is-active" href="#top">Home</a></li>
+          <li><a class="primary-nav__link" href="#about">About</a></li>
+          <li><a class="primary-nav__link" href="#services">Services</a></li>
+          <li><a class="primary-nav__link" href="#process">Our Process</a></li>
+          <li><a class="primary-nav__link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn btn--outline-gold header__cta js-whatsapp" href="#" data-wa-msg="Hi, I'd like to send money. Could you help me get started?">Get In Touch</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============================================================ -->
+    <!-- HERO                                                          -->
+    <!-- ============================================================ -->
+    <section class="hero" id="about">
+      <!-- Faint world-map dot grid background -->
+      <div class="hero__dots" aria-hidden="true"></div>
+
+      <!-- Decorative earth graphic -->
+      <div class="hero__graphic" aria-hidden="true">
+        <img src="assets/hero-graphic.svg" alt="" />
+      </div>
+
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <h1 class="hero__title">
+            Your Trusted Partner for<br />
+            Global <span class="text-gold">Money Transfers</span>
+          </h1>
+          <p class="hero__lede">
+            Fast, secure and reliable remittance services to send money across the world.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--gold btn--pill" href="#contact">
+              Send Money Now <i data-lucide="arrow-right" aria-hidden="true"></i>
+            </a>
+            <a class="btn btn--outline btn--pill" href="#process">Get Best Rates</a>
+          </div>
+
+          <ul class="hero__trust">
+            <li class="hero__trust-item">
+              <i data-lucide="shield" aria-hidden="true"></i>
+              <span><strong>Secure &amp; Safe</strong>Your money is 100% protected</span>
+            </li>
+            <li class="hero__trust-item">
+              <i data-lucide="clock" aria-hidden="true"></i>
+              <span><strong>Fast Transfers</strong>Quick delivery to your loved ones</span>
+            </li>
+            <li class="hero__trust-item">
+              <i data-lucide="headphones" aria-hidden="true"></i>
+              <span><strong>24/7 Support</strong>We are here to help you anytime</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Exchange rate widget -->
+        <aside class="rate-card" aria-label="Exchange rate calculator">
+          <h2 class="rate-card__title">Check Exchange Rate</h2>
+
+          <form class="rate-card__form" id="rateForm" onsubmit="return false;">
+            <div class="rate-card__field">
+              <label for="youSend">You Send</label>
+              <div class="rate-card__input-row">
+                <input type="text" inputmode="decimal" id="youSend" class="rate-card__input" value="1,000.00" aria-label="Amount you send" />
+                <span class="currency-pill">🇨🇦 CAD <i data-lucide="chevron-down" aria-hidden="true"></i></span>
+              </div>
+            </div>
+
+            <div class="rate-card__field">
+              <label for="receiverGets">Receiver Gets</label>
+              <div class="rate-card__input-row">
+                <input type="text" inputmode="decimal" id="receiverGets" class="rate-card__input" value="61,850.00" readonly aria-label="Amount receiver gets" />
+                <span class="currency-pill">🇮🇳 INR <i data-lucide="chevron-down" aria-hidden="true"></i></span>
+              </div>
+            </div>
+
+            <div class="rate-card__meta">
+              <div class="rate-card__meta-row">
+                <span>Exchange Rate</span>
+                <span>1 USD = 83.45 INR</span>
+              </div>
+              <div class="rate-card__meta-row">
+                <span>Transfer Fee</span>
+                <span>3.99 USD</span>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn--navy btn--block" id="rateGetStarted">Get Started</button>
+          </form>
+        </aside>
+      </div>
+
+      <!-- Soft S-curve into the next section -->
+      <div class="hero__curve" aria-hidden="true">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 60 C 360 120 1080 0 1440 60 L 1440 120 L 0 120 Z" fill="#FFFFFF"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- STATS BAR                                                     -->
+    <!-- ============================================================ -->
+    <section class="stats" aria-label="Key statistics">
+      <div class="container">
+        <ul class="stats__list">
+          <li class="stats__item">
+            <i data-lucide="users" aria-hidden="true"></i>
+            <strong class="stats__num">50K+</strong>
+            <span class="stats__label">Happy Customers</span>
+          </li>
+          <li class="stats__item">
+            <i data-lucide="globe" aria-hidden="true"></i>
+            <strong class="stats__num">200+</strong>
+            <span class="stats__label">Countries Served</span>
+          </li>
+          <li class="stats__item">
+            <i data-lucide="send" aria-hidden="true"></i>
+            <strong class="stats__num">$1B+</strong>
+            <span class="stats__label">Money Transferred</span>
+          </li>
+          <li class="stats__item">
+            <i data-lucide="shield-check" aria-hidden="true"></i>
+            <strong class="stats__num">99.9%</strong>
+            <span class="stats__label">Secure Transfers</span>
+          </li>
+          <li class="stats__item">
+            <i data-lucide="clock" aria-hidden="true"></i>
+            <strong class="stats__num">15+</strong>
+            <span class="stats__label">Years of Trust</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- WHY CHOOSE US                                                 -->
+    <!-- ============================================================ -->
+    <section class="why" id="services">
+      <div class="container">
+        <p class="eyebrow">WHY CHOOSE US</p>
+        <h2 class="section-title">Secure. Fast. Reliable.</h2>
+        <p class="section-sub">We make international money transfers simple, affordable and hassle-free.</p>
+
+        <ul class="why__grid">
+          <li class="why__card">
+            <span class="why__icon"><i data-lucide="lock" aria-hidden="true"></i></span>
+            <h3 class="why__title">Bank-Level Security</h3>
+            <p class="why__desc">Advanced encryption keeps your money safe.</p>
+          </li>
+          <li class="why__card">
+            <span class="why__icon"><i data-lucide="zap" aria-hidden="true"></i></span>
+            <h3 class="why__title">Lightning Fast</h3>
+            <p class="why__desc">Quick transfers to bank accounts worldwide.</p>
+          </li>
+          <li class="why__card">
+            <span class="why__icon"><i data-lucide="tag" aria-hidden="true"></i></span>
+            <h3 class="why__title">Best Exchange Rates</h3>
+            <p class="why__desc">Competitive rates with transparent fees.</p>
+          </li>
+          <li class="why__card">
+            <span class="why__icon"><i data-lucide="smartphone" aria-hidden="true"></i></span>
+            <h3 class="why__title">Easy &amp; Convenient</h3>
+            <p class="why__desc">Send money online anytime, anywhere.</p>
+          </li>
+          <li class="why__card">
+            <span class="why__icon"><i data-lucide="users" aria-hidden="true"></i></span>
+            <h3 class="why__title">Dedicated Support</h3>
+            <p class="why__desc">Friendly support team ready to assist you.</p>
+          </li>
+          <li class="why__card">
+            <span class="why__icon"><i data-lucide="shield-check" aria-hidden="true"></i></span>
+            <h3 class="why__title">Trusted &amp; Compliant</h3>
+            <p class="why__desc">Fully licensed and regulated.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- HOW IT WORKS                                                  -->
+    <!-- ============================================================ -->
+    <section class="how" id="process">
+      <div class="container">
+        <p class="eyebrow">HOW IT WORKS</p>
+        <h2 class="section-title">Send Money in 4 Simple Steps</h2>
+
+        <ol class="steps">
+          <li class="steps__item">
+            <span class="steps__circle"><i data-lucide="user" aria-hidden="true"></i></span>
+            <span class="steps__badge">1</span>
+            <h3 class="steps__title">Create Account</h3>
+            <p class="steps__desc">Sign up in minutes and verify your identity.</p>
+          </li>
+          <li class="steps__item">
+            <span class="steps__circle"><i data-lucide="send" aria-hidden="true"></i></span>
+            <span class="steps__badge">2</span>
+            <h3 class="steps__title">Enter Details</h3>
+            <p class="steps__desc">Provide receiver details and transfer amount.</p>
+          </li>
+          <li class="steps__item">
+            <span class="steps__circle"><i data-lucide="credit-card" aria-hidden="true"></i></span>
+            <span class="steps__badge">3</span>
+            <h3 class="steps__title">Make Payment</h3>
+            <p class="steps__desc">Choose your preferred payment method.</p>
+          </li>
+          <li class="steps__item">
+            <span class="steps__circle"><i data-lucide="check" aria-hidden="true"></i></span>
+            <span class="steps__badge">4</span>
+            <h3 class="steps__title">Money Delivered</h3>
+            <p class="steps__desc">Receiver gets the money quickly and securely.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- CTA BANNER                                                    -->
+    <!-- ============================================================ -->
+    <section class="cta-section" id="contact">
+      <div class="container">
+        <div class="cta">
+          <div class="cta__graphic" aria-hidden="true">
+            <img src="assets/cta-graphic.svg" alt="" />
+          </div>
+          <div class="cta__copy">
+            <h2 class="cta__title">Ready to Send Money?</h2>
+            <p class="cta__lede">Join thousands of happy customers who trust Atlas Corridor Corp for their remittances.</p>
+          </div>
+          <div class="cta__action">
+            <a class="btn btn--gold btn--pill js-whatsapp" href="#" data-wa-msg="Hi, I'd like to send money. Could you help me get started?">
+              Send Money Now <i data-lucide="arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================ -->
+  <!-- FOOTER                                                         -->
+  <!-- ============================================================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a class="brand brand--dark" href="#top" aria-label="Atlas Corridor Corp home">
+            <img class="brand__mark" src="assets/logo.svg" alt="" width="40" height="40" />
+            <span class="brand__text">
+              <span class="brand__name">ATLAS</span>
+              <span class="brand__sub">CORRIDOR CORP</span>
+            </span>
+          </a>
+          <p class="footer__about">
+            Atlas Corridor Corp is a trusted global remittance service provider, helping individuals and businesses send money securely across the world.
+          </p>
+          <ul class="social" aria-label="Social media">
+            <li><a href="#" aria-label="Facebook"><i data-lucide="facebook" aria-hidden="true"></i></a></li>
+            <li><a href="#" aria-label="Twitter"><i data-lucide="twitter" aria-hidden="true"></i></a></li>
+            <li><a href="#" aria-label="LinkedIn"><i data-lucide="linkedin" aria-hidden="true"></i></a></li>
+            <li><a href="#" aria-label="Instagram"><i data-lucide="instagram" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#top">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#process">Our Process</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Online Money Transfer</a></li>
+            <li><a href="#services">Bank Transfer</a></li>
+            <li><a href="#services">Cash Pickup</a></li>
+            <li><a href="#services">Business Payments</a></li>
+            <li><a href="#services">Currency Exchange</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Terms &amp; Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Contact Us</h4>
+          <ul class="footer__contact">
+            <li>
+              <i data-lucide="phone" aria-hidden="true"></i>
+              <a href="tel:+11234567890">+1 (416) 500-4836</a>
+            </li>
+            <li>
+              <i data-lucide="mail" aria-hidden="true"></i>
+              <a href="mailto:info@atlascorridor.com">info@atlascorridor.com</a>
+            </li>
+            <li>
+              <i data-lucide="map-pin" aria-hidden="true"></i>
+              <address>Anderson Jug City, 13- 728 Anderson St, Whitby L1N3V6</address>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© 2026 Atlas Corridor Corp. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
