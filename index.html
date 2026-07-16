@@ -99,7 +99,25 @@
               <label for="youSend">You Send</label>
               <div class="rate-card__input-row">
                 <input type="text" inputmode="decimal" id="youSend" class="rate-card__input" value="1,000.00" aria-label="Amount you send" />
-                <span class="currency-pill">🇨🇦 CAD <i data-lucide="chevron-down" aria-hidden="true"></i></span>
+                <div class="currency-pill currency-pill--selectable"
+                     role="combobox"
+                     aria-haspopup="listbox"
+                     aria-expanded="false"
+                     aria-label="Source currency"
+                     tabindex="0"
+                     data-currency-dropdown
+                     data-target="youSend">
+                  <span class="currency-pill__flag" data-flag>🇨🇦</span>
+                  <span class="currency-pill__code" data-code>CAD</span>
+                  <i data-lucide="chevron-down" aria-hidden="true"></i>
+                  <ul class="currency-menu" role="listbox" hidden>
+                    <li role="option" data-value="CAD" data-flag="🇨🇦" aria-selected="true"><span class="currency-menu__flag">🇨🇦</span><span class="currency-menu__code">CAD</span><span class="currency-menu__name">Canadian Dollar</span></li>
+                    <li role="option" data-value="USD" data-flag="🇺🇸" aria-selected="false"><span class="currency-menu__flag">🇺🇸</span><span class="currency-menu__code">USD</span><span class="currency-menu__name">US Dollar</span></li>
+                    <li role="option" data-value="EUR" data-flag="🇪🇺" aria-selected="false"><span class="currency-menu__flag">🇪🇺</span><span class="currency-menu__code">EUR</span><span class="currency-menu__name">Euro</span></li>
+                    <li role="option" data-value="GBP" data-flag="🇬🇧" aria-selected="false"><span class="currency-menu__flag">🇬🇧</span><span class="currency-menu__code">GBP</span><span class="currency-menu__name">British Pound</span></li>
+                    <li role="option" data-value="INR" data-flag="🇮🇳" aria-selected="false"><span class="currency-menu__flag">🇮🇳</span><span class="currency-menu__code">INR</span><span class="currency-menu__name">Indian Rupee</span></li>
+                  </ul>
+                </div>
               </div>
             </div>
 
@@ -107,18 +125,36 @@
               <label for="receiverGets">Receiver Gets</label>
               <div class="rate-card__input-row">
                 <input type="text" inputmode="decimal" id="receiverGets" class="rate-card__input" value="61,850.00" readonly aria-label="Amount receiver gets" />
-                <span class="currency-pill">🇮🇳 INR <i data-lucide="chevron-down" aria-hidden="true"></i></span>
+                <div class="currency-pill currency-pill--selectable"
+                     role="combobox"
+                     aria-haspopup="listbox"
+                     aria-expanded="false"
+                     aria-label="Target currency"
+                     tabindex="0"
+                     data-currency-dropdown
+                     data-target="receiverGets">
+                  <span class="currency-pill__flag" data-flag>🇮🇳</span>
+                  <span class="currency-pill__code" data-code>INR</span>
+                  <i data-lucide="chevron-down" aria-hidden="true"></i>
+                  <ul class="currency-menu" role="listbox" hidden>
+                    <li role="option" data-value="CAD" data-flag="🇨🇦" aria-selected="false"><span class="currency-menu__flag">🇨🇦</span><span class="currency-menu__code">CAD</span><span class="currency-menu__name">Canadian Dollar</span></li>
+                    <li role="option" data-value="USD" data-flag="🇺🇸" aria-selected="false"><span class="currency-menu__flag">🇺🇸</span><span class="currency-menu__code">USD</span><span class="currency-menu__name">US Dollar</span></li>
+                    <li role="option" data-value="EUR" data-flag="🇪🇺" aria-selected="false"><span class="currency-menu__flag">🇪🇺</span><span class="currency-menu__code">EUR</span><span class="currency-menu__name">Euro</span></li>
+                    <li role="option" data-value="GBP" data-flag="🇬🇧" aria-selected="false"><span class="currency-menu__flag">🇬🇧</span><span class="currency-menu__code">GBP</span><span class="currency-menu__name">British Pound</span></li>
+                    <li role="option" data-value="INR" data-flag="🇮🇳" aria-selected="true"><span class="currency-menu__flag">🇮🇳</span><span class="currency-menu__code">INR</span><span class="currency-menu__name">Indian Rupee</span></li>
+                  </ul>
+                </div>
               </div>
             </div>
 
             <div class="rate-card__meta">
               <div class="rate-card__meta-row">
                 <span>Exchange Rate</span>
-                <span>1 CAD = 61.85 INR</span>
+                <span id="rateDisplay">1 CAD = 61.85 INR</span>
               </div>
               <div class="rate-card__meta-row">
                 <span>Transfer Fee</span>
-                <span>4.99 CAD</span>
+                <span id="feeDisplay">4.99 CAD</span>
               </div>
             </div>
 

@@ -557,6 +557,131 @@ p {
   height: 14px;
 }
 
+/* ----- Selectable currency pill (combobox trigger) ----- */
+.currency-pill--selectable {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  transition: border-color 0.15s var(--ease), background 0.15s var(--ease);
+}
+
+.currency-pill--selectable:hover,
+.currency-pill--selectable:focus-visible {
+  border-color: var(--gold-500);
+  background: var(--cream-100);
+  outline: none;
+}
+
+.currency-pill--selectable.is-open {
+  border-color: var(--gold-500);
+  background: var(--cream-100);
+}
+
+.currency-pill--selectable.is-open [data-lucide] {
+  transform: rotate(180deg);
+}
+
+.currency-pill__flag {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.currency-pill__code {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.currency-pill--selectable [data-lucide] {
+  transition: transform 0.2s var(--ease);
+}
+
+/* ----- Currency dropdown menu ----- */
+.currency-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  min-width: 240px;
+  max-width: 280px;
+  max-height: 280px;
+  overflow-y: auto;
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+  z-index: 20;
+  padding: 6px 0;
+  margin: 0;
+  list-style: none;
+}
+
+.currency-menu[hidden] {
+  display: none;
+}
+
+.currency-menu li {
+  display: grid;
+  grid-template-columns: 28px 44px 1fr;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--navy-900);
+  cursor: pointer;
+  transition: background 0.12s var(--ease);
+}
+
+.currency-menu li:hover,
+.currency-menu li:focus-visible {
+  background: var(--bg-light);
+  outline: none;
+}
+
+.currency-menu li[aria-selected="true"] {
+  background: var(--cream-100);
+  color: var(--navy-900);
+  font-weight: 600;
+  position: relative;
+}
+
+.currency-menu li[aria-selected="true"]::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  bottom: 6px;
+  width: 3px;
+  background: var(--gold-500);
+  border-radius: 0 2px 2px 0;
+}
+
+.currency-menu__flag {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.currency-menu__code {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.currency-menu__name {
+  color: var(--text-gray);
+  font-size: 12px;
+  font-weight: 400;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 480px) {
+  .currency-menu {
+    min-width: 220px;
+    max-width: calc(100vw - 40px);
+  }
+}
+
 .rate-card__meta {
   display: flex;
   flex-direction: column;
