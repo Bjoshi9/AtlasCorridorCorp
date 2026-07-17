@@ -679,6 +679,8 @@ p {
   .currency-menu {
     min-width: 220px;
     max-width: calc(100vw - 40px);
+    right: 0;
+    left: auto;
   }
 }
 
@@ -1299,11 +1301,33 @@ p {
     font-size: 28px;
   }
 
+  .hero__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
   .hero__actions .btn {
     width: 100%;
   }
 
   .rate-card {
-    padding: 22px 20px;
+    padding: 20px 16px;
+  }
+
+  .rate-card__input-row {
+    padding: 6px 6px 6px 10px;
+  }
+
+  .rate-card__input {
+    font-size: 16px;
+  }
+
+  .currency-pill {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+
+  .stats__list {
+    grid-template-columns: 1fr;
   }
 }
